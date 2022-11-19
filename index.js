@@ -9,7 +9,7 @@ const io = require('socket.io')(server, {
 });
 
 app.use(cors());
-app.get("/", (req, res) => res.send('Server running'));
+app.get("/", (req, res) => res.send('Server running successfully'));
 
 io.on('connection', socket => {
     socket.on('user-join', ({ roomID, peerID, name }) => {
